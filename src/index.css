@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* VetLedger Brand Colors */
+    --primary: 207 69% 36%; /* Primary Blue #1C5D99 */
+    --primary-foreground: 0 0% 100%;
+    
+    --accent: 152 44% 50%; /* Accent Green #4CAF7D */
+    --accent-foreground: 0 0% 100%;
+    
+    --highlight: 41 100% 67%; /* Highlight Yellow #FFC857 */
+    --highlight-foreground: 240 4% 11%;
+    
+    --dark-slate: 240 4% 11%; /* Dark Slate #1B1B1D */
+    --soft-gray: 0 0% 92%; /* Soft Gray #EAEAEA */
+    
+    --background: 0 0% 100%;
+    --foreground: 240 4% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 4% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 4% 11%;
+    
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 240 4% 11%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 4% 46%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 207 69% 36%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(207 69% 36%) 0%, hsl(152 44% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(28, 93, 153, 0.08);
+    --shadow-medium: 0 8px 30px rgba(28, 93, 153, 0.12);
+    --shadow-hover: 0 12px 40px rgba(28, 93, 153, 0.16);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
